@@ -14,7 +14,7 @@ public class VesselDataAccessService implements VesselDao {
 
     @Override
     public int insertVessel(String name, Date date, Date receivedDate, double latitude, double longitude, double speed) {
-        DB.add(new Vessel(name,date,receivedDate,latitude,longitude,speed));
+        DB.add(new Vessel(name,date,receivedDate,Math.toRadians(latitude),Math.toRadians(longitude),speed*1.852/3.600));
         return 1;
     }
 

@@ -20,9 +20,9 @@ public class Vessel {
                   @JsonProperty("speed") double speed) {
         this.name = name;
         this.date = date;
-        this.latitude = Math.toRadians(latitude);
-        this.longitude = Math.toRadians(longitude);
-        this.speed = speed*0.51444444; //Converts knots to m/s
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.speed = speed;
     }
 
     public String getName(){
